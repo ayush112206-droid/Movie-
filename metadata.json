@@ -1,0 +1,6 @@
+{
+  "name": "V8 Streaming",
+  "description": "Premium movie and TV show streaming platform powered by TMDB.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
