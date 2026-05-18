@@ -38,7 +38,7 @@ export default function ContentRow({ title, items, isLoading, href }: ContentRow
 
       <div 
         ref={rowRef}
-        className="flex items-center gap-4 px-4 md:px-8 overflow-x-auto hide-scrollbar scroll-momentum snap-x"
+        className="flex items-center gap-3 px-4 md:px-8 overflow-x-auto hide-scrollbar scroll-momentum snap-x"
       >
         {isLoading ? (
           [...Array(10)].map((_, i) => <SkeletonCard key={i} />)

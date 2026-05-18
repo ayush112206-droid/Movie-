@@ -34,9 +34,9 @@ export default function Navbar() {
   return (
     <motion.nav
       initial={{ y: 0 }}
-      animate={{ y: isVisible ? 0 : -100 }}
+      animate={{ y: isVisible ? 0 : -140 }}
       transition={{ duration: 0.3 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-10 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'glass py-3' : 'bg-transparent py-5'
       }`}
     >
@@ -60,6 +60,15 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
+          <a 
+            href="https://t.me/yourchannel" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hidden lg:flex items-center gap-2 bg-brand/10 hover:bg-brand text-brand hover:text-white px-4 py-1.5 rounded-full text-xs font-bold transition-all border border-brand/20 group"
+          >
+            <span className="group-hover:scale-110 transition-transform">Join Telegram</span>
+          </a>
+
           <div className="hidden md:block">
             <SearchBar />
           </div>
@@ -88,9 +97,19 @@ export default function Navbar() {
           >
             <div className="flex items-center justify-between mb-8">
               <span className="text-xl font-bold">Search</span>
-              <button onClick={() => setIsSearchOpen(false)}>
-                <X className="w-8 h-8" />
-              </button>
+              <div className="flex items-center gap-4">
+                <a 
+                  href="https://t.me/yourchannel" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-brand/10 text-brand px-3 py-1 rounded-full text-[10px] font-bold border border-brand/20"
+                >
+                  Join Telegram
+                </a>
+                <button onClick={() => setIsSearchOpen(false)}>
+                  <X className="w-8 h-8" />
+                </button>
+              </div>
             </div>
             <SearchBar autoFocus onSelect={() => setIsSearchOpen(false)} />
           </motion.div>

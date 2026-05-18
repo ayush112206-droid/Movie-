@@ -25,11 +25,13 @@ export const viewport: Viewport = {
 };
 
 import { ToastProvider } from '@/components/Toast';
+import TelegramBanner from '@/components/TelegramBanner';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${outfit.variable}`}>
-      <body suppressHydrationWarning className="bg-bg-base overflow-x-hidden selection:bg-brand/30 selection:text-white">
+      <body suppressHydrationWarning className="bg-bg-base overflow-x-hidden selection:bg-brand/30 selection:text-white pt-10">
+        <TelegramBanner />
         <ToastProvider>
           {children}
         </ToastProvider>

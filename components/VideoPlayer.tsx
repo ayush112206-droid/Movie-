@@ -49,10 +49,12 @@ export default function VideoPlayer({ id, type, season = 1, episode = 1, current
       )}
       {embedUrl && (
         <iframe
+          id="main-player"
           src={embedUrl}
           className="w-full h-full border-none"
-          allowFullScreen
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen={true}
+          frameBorder="0"
+          referrerPolicy="no-referrer"
           onLoad={() => setLoading(false)}
         />
       )}

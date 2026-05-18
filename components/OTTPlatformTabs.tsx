@@ -23,13 +23,21 @@ export default function OTTPlatformTabs({ activeId, onChange }: OTTPlatformTabsP
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => onChange(platform.id)}
-              className={`px-6 py-2 rounded-full text-xs font-bold transition-all border ${
+              className={`flex-shrink-0 flex items-center justify-center h-10 px-6 rounded-full text-xs font-bold transition-all border ${
                 isActive 
-                  ? 'bg-brand border-brand text-white shadow-[0_0_15px_rgba(229,9,20,0.3)]' 
-                  : 'bg-[#16161c] border-white/10 text-text-3 hover:text-white hover:border-white/20'
+                  ? 'bg-brand/10 border-brand text-brand shadow-[0_0_15px_rgba(229,9,20,0.2)]' 
+                  : 'bg-[#16161c] border-white/5 text-text-3 hover:text-white hover:border-white/20'
               }`}
             >
-              {platform.name}
+              {'logo' in platform && platform.logo ? (
+                <img 
+                  src={platform.logo} 
+                  alt={platform.name} 
+                  className="h-4 max-w-[80px] object-contain brightness-0 invert" 
+                />
+              ) : (
+                <span>{platform.name}</span>
+              )}
             </motion.button>
           );
         })}

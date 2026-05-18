@@ -7,11 +7,11 @@ export const VIDEO_SERVERS = [
 
 export const OTT_PLATFORMS = [
   { id: 0, name: 'All', providerId: null },
-  { id: 8, name: 'Netflix', providerId: 8 },
-  { id: 119, name: 'Prime Video', providerId: 119 },
-  { id: 337, name: 'Disney+', providerId: 337 },
-  { id: 350, name: 'Apple TV+', providerId: 350 },
-  { id: 531, name: 'Max', providerId: 531 },
+  { id: 8, name: 'Netflix', providerId: 8, logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg' },
+  { id: 119, name: 'Prime Video', providerId: 119, logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png' },
+  { id: 337, name: 'Disney+', providerId: 337, logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg' },
+  { id: 350, name: 'Apple TV+', providerId: 350, logo: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Apple_TV_Plus_Logo.svg' },
+  { id: 531, name: 'Max', providerId: 531, logo: 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Max_logo.svg' },
   { id: 232, name: 'ZEE5', providerId: 232 },
   { id: 315, name: 'hoichoi', providerId: 315 },
   { id: 611, name: 'ULLU', providerId: 611 },

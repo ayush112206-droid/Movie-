@@ -27,8 +27,8 @@ export async function GET(req: NextRequest) {
       break;
     case 2: // 2Embed
       embedUrl = type === 'movie'
-        ? `https://www.2embed.cc/embed/${id}`
-        : `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}`;
+        ? `https://www.2embed.skin/embed/${id}`
+        : `https://www.2embed.skin/embedtv/${id}&s=${s}&e=${e}`;
       break;
     case 3: // EmbedSu
       embedUrl = type === 'movie'
@@ -36,7 +36,9 @@ export async function GET(req: NextRequest) {
         : `https://embed.su/embed/tv/${id}/${s}/${e}`;
       break;
     default:
-      embedUrl = `https://www.2embed.cc/embed/${type === 'movie' ? id : `tv/${id}&s=${s}&e=${e}`}`;
+      embedUrl = type === 'movie' 
+        ? `https://www.2embed.skin/embed/${id}`
+        : `https://www.2embed.skin/embedtv/${id}&s=${s}&e=${e}`;
   }
 
   return NextResponse.json({ url: embedUrl });

@@ -163,7 +163,7 @@ export default function DetailView({ id, type, data, similar, isLoading }: Detai
                 {(['overview', 'cast'] as const).map((tab) => (
                   <button
                     key={tab}
-                    onClick={() => setActiveTab(tab)}
+                    onClick={() => setActiveTab(tab as any)}
                     className={`pb-4 text-sm font-bold uppercase tracking-widest transition-all relative ${
                       activeTab === tab ? 'text-brand' : 'text-text-3 hover:text-white'
                     }`}
@@ -191,7 +191,7 @@ export default function DetailView({ id, type, data, similar, isLoading }: Detai
                     <div className="flex gap-6 overflow-x-auto hide-scrollbar pb-4">
                       {data.credits?.cast?.slice(0, 15).map((person: Cast) => (
                         <div key={person.id} className="shrink-0 w-24 text-center space-y-2">
-                          <div className="relative w-24 h-24 rounded-full overflow-hidden bg-bg-surface-2">
+                          <div className="relative w-24 h-24 rounded-full overflow-hidden bg-bg-surface-2 border-2 border-transparent hover:border-brand transition-all">
                             {person.profile_path ? (
                                <Image 
                                  src={`https://image.tmdb.org/t/p/w185${person.profile_path}`}
@@ -210,22 +210,6 @@ export default function DetailView({ id, type, data, similar, isLoading }: Detai
                           </div>
                         </div>
                       ))}
-                    </div>
-                  )}
-                  {false && (
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                       {similar?.slice(0, 10).map((item) => (
-                           <div key={item.id} className="w-full">
-                             <Image 
-                               src={`https://image.tmdb.org/t/p/w342${item.poster_path}`}
-                               alt={title}
-                               width={200}
-                               height={300}
-                               className="rounded-xl hover:scale-105 transition-transform"
-                               referrerPolicy="no-referrer"
-                             />
-                           </div>
-                       ))}
                     </div>
                   )}
                 </motion.div>

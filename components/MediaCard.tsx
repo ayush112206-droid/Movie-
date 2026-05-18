@@ -24,7 +24,7 @@ export default function MediaCard({ item, className }: MediaCardProps) {
     <motion.div
       whileHover={{ y: -6, scale: 1.025, zIndex: 10 }}
       transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-      className={`relative group bg-[#1e1e26] rounded-xl overflow-hidden aspect-[2/3] w-[148px] md:w-[175px] flex-shrink-0 cursor-pointer shadow-lg hover:shadow-2xl transition-shadow border border-white/5 ${className}`}
+      className={`relative group bg-[#1e1e26] rounded-xl overflow-hidden aspect-[2/3] w-[110px] md:w-[140px] flex-shrink-0 cursor-pointer shadow-lg hover:shadow-2xl transition-shadow border border-white/5 ${className}`}
     >
       <Link href={`/${isMovie ? 'movie' : 'tv'}/${item.id}`}>
         <div className="relative w-full h-full overflow-hidden">
